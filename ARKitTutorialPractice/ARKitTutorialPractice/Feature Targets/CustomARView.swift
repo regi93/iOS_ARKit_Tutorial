@@ -25,6 +25,7 @@ class CustomARView: ARView {
     }
     
     private var cancellables: Set<AnyCancellable> = []
+    private var goldBar: GoldBar.GreenBox? = nil
     
     func subscribeToActionStream(){
         ARManager.shared.actionStream
@@ -32,8 +33,19 @@ class CustomARView: ARView {
                 switch action {
                 case .placeBlock(let color):
                     self?.placeBlock(ofcolor: color)
+                case .placeGoldBar:
+                    do {
+                        let goldBar = try GoldBar.loadGreenBox()
+                        self?.goldBar = goldBar
+                        self?.scene.addAnchor(goldBar)
+                    }catch {
+                        print(error)
+                    }
+                    
                 case .removeAllAnchors:
                     self?.scene.anchors.removeAll()
+                case .playGoldBarAnimation:
+                    self?.goldBar?.notifications.trigger.post()
                 }
             }
             .store(in: &cancellables)
@@ -42,6 +54,7 @@ class CustomARView: ARView {
     func configureExmaples() {
 //        Tracks the device relative to it's environment
         let configuration = ARWorldTrackingConfiguration()
+        configuration.planeDetection = .horizontal
         session.run(configuration)
         // Not supported in all regions, tracks w.r.t. global coordinates
         let _ = ARGeoTrackingConfiguration() // 실제 좌표를 기준으로 객체를 배치 (위도 경도) but.. 특정 지역에서만 지원되는 기능
@@ -80,7 +93,7 @@ class CustomARView: ARView {
         let _ = try? Entity.load(named: "usdzfileName")
         
         // Load an entity from a reality file
-        let _ = try? Entity.load(named: "realityFileName")
+        let 헬리콥터 = try? Entity.load(named: "hab_en")
         
         // Generate an entity with code
         let box = MeshResource.generateBox(size: 1) // size 단위는 meter이다.
@@ -98,8 +111,10 @@ class CustomARView: ARView {
         let material = SimpleMaterial(color: UIColor(color), isMetallic: true)
         let entity = ModelEntity(mesh: block, materials: [material])
         
+        
+        guard let 헬리콥터 = try? Entity.load(named: "hab_en") else { return }
         let anchor = AnchorEntity(plane: .horizontal)
-        anchor.addChild(entity)
+        anchor.addChild(헬리콥터)
         scene.addAnchor(anchor)
     }
     

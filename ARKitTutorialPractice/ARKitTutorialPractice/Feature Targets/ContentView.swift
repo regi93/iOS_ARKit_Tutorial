@@ -21,6 +21,20 @@ struct ContentView: View {
             .overlay(alignment: .bottom){
                 ScrollView(.horizontal){
                     HStack{
+                        Button("Place"){
+                            ARManager.shared.actionStream.send(.placeGoldBar)
+                        }
+                        .frame(width: 60, height: 40)
+                        .padding()
+                        .background(.regularMaterial)
+                        .cornerRadius(20)
+                        Button("Bounce"){
+                            ARManager.shared.actionStream.send(.playGoldBarAnimation)
+                        }
+                        .frame(width: 60, height: 40)
+                        .padding()
+                        .background(.regularMaterial)
+                        .cornerRadius(20)
                         Button{
                             ARManager.shared.actionStream.send(.removeAllAnchors)
                         }label: {

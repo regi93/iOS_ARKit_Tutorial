@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E12218E32AD8D1270019E9F3 /* hab_en.reality in Resources */ = {isa = PBXBuildFile; fileRef = E12218E22AD8D1270019E9F3 /* hab_en.reality */; };
 		E16422BA2AD76A65003F7514 /* ARAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16422B92AD76A65003F7514 /* ARAction.swift */; };
 		E16422BC2AD76B0D003F7514 /* ARManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16422BB2AD76B0D003F7514 /* ARManager.swift */; };
+		E16422BE2AD7BA2F003F7514 /* GoldBar.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = E16422BD2AD7BA2F003F7514 /* GoldBar.rcproject */; };
 		E184A0982AD6863E0078598F /* ARKitTutorialPracticeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E184A0972AD6863E0078598F /* ARKitTutorialPracticeApp.swift */; };
 		E184A09A2AD6863E0078598F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E184A0992AD6863E0078598F /* ContentView.swift */; };
 		E184A09C2AD6863E0078598F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E184A09B2AD6863E0078598F /* Assets.xcassets */; };
@@ -18,8 +20,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E12218E22AD8D1270019E9F3 /* hab_en.reality */ = {isa = PBXFileReference; lastKnownFileType = file; path = hab_en.reality; sourceTree = "<group>"; };
 		E16422B92AD76A65003F7514 /* ARAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARAction.swift; sourceTree = "<group>"; };
 		E16422BB2AD76B0D003F7514 /* ARManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARManager.swift; sourceTree = "<group>"; };
+		E16422BD2AD7BA2F003F7514 /* GoldBar.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = GoldBar.rcproject; sourceTree = "<group>"; };
 		E184A0942AD6863E0078598F /* ARKitTutorialPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARKitTutorialPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E184A0972AD6863E0078598F /* ARKitTutorialPracticeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARKitTutorialPracticeApp.swift; sourceTree = "<group>"; };
 		E184A0992AD6863E0078598F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -80,6 +84,8 @@
 			children = (
 				E184A0992AD6863E0078598F /* ContentView.swift */,
 				E184A0A62AD686AE0078598F /* CustomARView.swift */,
+				E16422BD2AD7BA2F003F7514 /* GoldBar.rcproject */,
+				E12218E22AD8D1270019E9F3 /* hab_en.reality */,
 				E16422B92AD76A65003F7514 /* ARAction.swift */,
 				E16422BB2AD76B0D003F7514 /* ARManager.swift */,
 				E184A0A82AD688180078598F /* CustomARViewRepresentable.swift */,
@@ -145,6 +151,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E12218E32AD8D1270019E9F3 /* hab_en.reality in Resources */,
 				E184A09F2AD6863E0078598F /* Preview Assets.xcassets in Resources */,
 				E184A09C2AD6863E0078598F /* Assets.xcassets in Resources */,
 			);
@@ -159,6 +166,7 @@
 			files = (
 				E184A09A2AD6863E0078598F /* ContentView.swift in Sources */,
 				E16422BA2AD76A65003F7514 /* ARAction.swift in Sources */,
+				E16422BE2AD7BA2F003F7514 /* GoldBar.rcproject in Sources */,
 				E184A0A72AD686AE0078598F /* CustomARView.swift in Sources */,
 				E184A0982AD6863E0078598F /* ARKitTutorialPracticeApp.swift in Sources */,
 				E16422BC2AD76B0D003F7514 /* ARManager.swift in Sources */,
